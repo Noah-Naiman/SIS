@@ -1,8 +1,9 @@
 public class SISRunner {
 
 	public static void main(String[] args) {
-		//System.out.println("Hello World!");asdaasdsd
 		
+		System.out.println("Hello World!");
+		System.out.println("Good Job!");
 
 	}
 
