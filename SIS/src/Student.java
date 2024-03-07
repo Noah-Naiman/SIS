@@ -28,7 +28,7 @@ public class Student {
 		course2Letter = c2L;
 		course3Letter = c3L;
 	}
-	public String firstName getFirstName()
+	//public String firstName getFirstName()
 	
 	
 
