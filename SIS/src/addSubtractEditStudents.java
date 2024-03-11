@@ -5,9 +5,11 @@ public class addSubtractEditStudents
 	{
 		System.out.println("Sure, lets add a student...");
 		
-		System.out.println("What is their name?");
+		System.out.println("What is their first name?");
 		Scanner sc= new Scanner(System.in);
-		String name= sc.next();
+		String fname= sc.next();
+		System.out.println("What is their last name?");
+		String lname= sc.next();
 
 		System.out.println("What is their first period?");
 		String fp = sc.next();
@@ -23,7 +25,7 @@ public class addSubtractEditStudents
 		String tp = sc.next();
 		System.out.println("What is their third period grade?");
 		String tpg= sc.next();
-		
+        students.add(new Student(fname, lname, fp,  sp, tp,  fpg, spg, tpg));
 	}
 	public static void removeStudent() 
 	{
