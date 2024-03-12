@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class Student {
-	ArrayList <Student> database = new ArrayList <Student> ();
 	private String firstName;
 	private String lastName;
 	private double gpa;
