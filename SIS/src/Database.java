@@ -6,7 +6,7 @@ public class Database {
 
 	public static void fillArray() throws IOException
 	{
-		Scanner myFile = new Scanner(new File("Student"));
+		Scanner myFile = new Scanner(new File("StudentList.txt"));
 		ArrayList <Student> database = new ArrayList <Student> ();
 		while (myFile.hasNext())
 		{
