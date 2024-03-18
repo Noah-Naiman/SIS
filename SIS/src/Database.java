@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Database {
-
+	static ArrayList <Student> database = new ArrayList <Student> ();
 	public static void fillArray() throws IOException
 	{
 		Scanner myFile = new Scanner(new File("StudentList.txt"));
-		ArrayList <Student> database = new ArrayList <Student> ();
+		
 		while (myFile.hasNext())
 		{
 			int counter = 0;

@@ -2,14 +2,20 @@ public class Sorting
 {
 	public static void sortLastName()
 	{
-		for(int i = 0; i < Student.database.length-1; i++)
+		for(int i = 0; i < Database.database.size(); i++)
 		{
-			if(Student.database.getLastName(i).substring(0,1).equals(Student.database.getLastName(i+1).substring(0,1)))
+			if(Database.database.get(i).getLastName().substring(0,1).equals(Database.database.get(i+1).getLastName().substring(0,1)))
 			{
-				
+				sortGPA();
+			}
+			else
+			{
+			
 			}
 		}
 	}
+	
+	
 	
 	public static void sortGPA()
 	{
