@@ -1,7 +1,10 @@
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 58382ee2da381a1681f578e2fe74d3ec90d88038
 public class Student {
 	private String firstName;
 	private String lastName;
