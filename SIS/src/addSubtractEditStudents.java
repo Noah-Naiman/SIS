@@ -26,32 +26,33 @@ import java.io.IOException;
 	        System.out.println("Sure, let's add a student...");
 
 	        System.out.println("What is their first name?");
-	        String f = userInput.nextLine();
+	        String firstN = userInput.nextLine();
 
 	        System.out.println("What is their last name?");
-	        String l = userInput.nextLine();
+	        String lastN = userInput.nextLine();
 
 	        System.out.println("What is their first period?");
-	        String c1N = userInput.nextLine();
+	        String course1N = userInput.nextLine();
 
 	        System.out.println("What is their first period grade?");
-	        String c1L = userInput.nextLine();
+	        String course2N = userInput.nextLine();
 
 	        System.out.println("What is their second period?");
-	        String c2N = userInput.nextLine();
+	        String course3N = userInput.nextLine();
 
 	        System.out.println("What is their second period grade?");
-	        String c2L = userInput.nextLine();
+	        String course1L = userInput.nextLine();
 
 	        System.out.println("What is their third period?");
-	        String c3N = userInput.nextLine();
+	        String course2L = userInput.nextLine();
 
 	        System.out.println("What is their third period grade?");
-	        String c3L = userInput.nextLine();
+	        String course3L = userInput.nextLine();
 	        
 		
-		System.out.println(f +" "+ l + " 1) " + c1N +" "+ c1L + " 2) "+ c2N +" "+ c2L + " 3)"  +" "+ c3N +" "+ c3L);
-        Database.database.add(new Student(f, l, 0, 1, 2, 3, c1N, c2L, c3L));
+	    System.out.println(firstN + " " + lastN + " 1. " + course1N + " " + course1L + " 2. " + course2N + " " + course2L + " 3. " + course3N + " " + course3L);
+        Database.database.add(new Student(firstN, lastN, 0, 1, 2, 3, course1N, course2N, course3N, course1L, course2L, course3L));
+        
 	}//unfinished business ^^
 	private static void removeStudent() 
 	{
