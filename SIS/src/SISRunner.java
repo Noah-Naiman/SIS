@@ -30,15 +30,15 @@ public class SISRunner {
 			int sortingChoice = userIntInput.nextInt();
 			if (sortingChoice == 1)
 			{
-				Sorting.sortLastName();
+				//Sorting.sortLastName();
 			}
 			else if (sortingChoice == 2)
 			{
-				Sorting.sortGPA();
+				//Sorting.sortGPA();
 			}
 			else if (sortingChoice == 3)
 			{
-				Sorting.sortClassPeriod();
+				//Sorting.sortClassPeriod();
 			}
 			
 		}
