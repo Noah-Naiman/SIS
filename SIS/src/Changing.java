@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Changing {
 	
-	public static void main(String[] args) {
+	public static void change() {
 		Scanner userIntInput = new Scanner(System.in);
 		System.out.println("What do you want to do?");
 		System.out.println("[1] Change a students grade");
