@@ -9,7 +9,7 @@ public class Database {
 	{
 		
 
-		Scanner myFile = new Scanner(new File("StudentList.txt"));
+		Scanner myFile = new Scanner(new File(System.getProperty("user.dir") + "/SIS/src/" + "StudentList.txt"));
 		
 
 		while (myFile.hasNext())
