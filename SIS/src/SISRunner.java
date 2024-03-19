@@ -1,12 +1,15 @@
 import java.util.Scanner;
 import java.io.IOException;
 
+
 public class SISRunner {
 	static Scanner userLongInput = new Scanner(System.in);
 	static Scanner userIntInput = new Scanner(System.in);
 
+
 	public static void main(String[] args) throws IOException 
 	{
+
 		System.out.println("What would you like to do in the student data base? ");
 		System.out.println("1) add or delete a student");
 		System.out.println("2) change student grades/schedule");
