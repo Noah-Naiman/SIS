@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 
 public class Student {
 	private String firstName;
@@ -79,8 +78,57 @@ public class Student {
 	{
 		return course3Letter;
 	}
-
 	
+	public void setFirstName(String firstName)
+	{
+		this.firstName = firstName;
+	}
+	public void setLastName(String lastName)
+	{
+		this.lastName = lastName;
+	}
+	public void setGpa(double gpa)
+	{
+		this.gpa = gpa;
+	}
+	public void setCourse1 (int course1)
+	{
+		this.course1 = course1;
+	}
+	public void setCourse2 (int course2)
+	{
+		this.course2 = course2;
+	}
+	public void setCourse3 (int course3)
+	{
+		this.course3 = course3;
+	}
+	public void setCourse1Name (String course1Name)
+	{
+		this.course1Name = course1Name;
+	}
+	public void setCourse2Name (String course2Name)
+	{
+		this.course2Name = course2Name;
+	}
+	public void setCourse3Name (String course3Name)
+	{
+		this.course3Name = course3Name;
+	}
+	public void setCourse1Letter(String course1Letter)
+	{
+		this.course1Letter = course1Letter;
+	}
+	public void setCourse2Letter(String course2Letter)
+	{
+		this.course2Letter = course2Letter;
+	}
+	public void setCourse3Letter(String course3Letter)
+	{
+		this.course3Letter = course3Letter;
+	}
+
+//test
 // TESTING FOR HOMEWORK 
 
 	

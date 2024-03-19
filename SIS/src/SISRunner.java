@@ -6,7 +6,10 @@ public class SISRunner {
 	static Scanner userLongInput = new Scanner(System.in);
 	static Scanner userIntInput = new Scanner(System.in);
 
-	public static void main(String[] args) throws IOException {
+
+	public static void main(String[] args) throws IOException 
+	{
+
 		System.out.println("What would you like to do in the student data base? ");
 		System.out.println("1) add or delete a student");
 		System.out.println("2) change student grades/schedule");
@@ -30,20 +33,24 @@ public class SISRunner {
 			int sortingChoice = userIntInput.nextInt();
 			if (sortingChoice == 1)
 			{
-				Sorting.sortLastName();
+				//Sorting.sortLastName();
 			}
 			else if (sortingChoice == 2)
 			{
-				Sorting.sortGPA();
+				//Sorting.sortGPA();
 			}
 			else if (sortingChoice == 3)
 			{
-				Sorting.sortClassPeriod();
+				//Sorting.sortClassPeriod();
 			}
 			
 		}
 		 
 
 	}
-
+	
+	
+	
+	
+	
 }
