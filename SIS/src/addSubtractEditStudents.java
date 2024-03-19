@@ -21,33 +21,37 @@ import java.io.IOException;
 	        }
 	    }
 	
-	public static void addStudent() 
-	{
-		
-		Scanner userInput= new Scanner(System.in);
-		System.out.println("Sure, lets add a student...");
-		
-		System.out.println("What is their first name?");
-		
-		String f = userInput.nextLine();
-		System.out.println("What is their last name?");
-		String l = userInput.nextLine();
+	    public static void addStudent() {
+	        Scanner userInput = new Scanner(System.in);
+	        System.out.println("Sure, let's add a student...");
 
-		System.out.println("What is their first period?");
-		String c1N = userInput.nextLine();
-		System.out.println("What is their first period grade?");
-		String course1Letter = userInput.nextLine();
+	        System.out.println("What is their first name?");
+	        String f = userInput.nextLine();
+
+	        System.out.println("What is their last name?");
+	        String l = userInput.nextLine();
+
+	        System.out.println("What is their first period?");
+	        String c1N = userInput.nextLine();
+
+	        System.out.println("What is their first period grade?");
+	        String c1L = userInput.nextLine();
+
+	        System.out.println("What is their second period?");
+	        String c2N = userInput.nextLine();
+
+	        System.out.println("What is their second period grade?");
+	        String c2L = userInput.nextLine();
+
+	        System.out.println("What is their third period?");
+	        String c3N = userInput.nextLine();
+
+	        System.out.println("What is their third period grade?");
+	        String c3L = userInput.nextLine();
+	        
 		
-		System.out.println("What is their second period?");
-		String c2N = userInput.nextLine();
-		System.out.println("What is their second period grade?");
-		String c2L = userInput.nextLine();
-		
-		System.out.println("What is their third period?");
-		String c3N = userInput.nextLine();
-		System.out.println("What is their third period grade?");
-		String c3L = userInput.nextLine();
-        Database.Student.add(new Student(f, l, 0, ,  sp, tp,  fpg, spg, tpg));
+		System.out.println(f +" "+ l + " 1) " + c1N +" "+ c1L + " 2) "+ c2N +" "+ c2L + " 3)"  +" "+ c3N +" "+ c3L);
+        Database.database.add(new Student(f, l, 0, 1, 2, 3, c1N, c2L, c3L));
 	}//unfinished business ^^
 	private static void removeStudent() 
 	{
