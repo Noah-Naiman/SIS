@@ -1,9 +1,10 @@
 import java.util.*;
-import java.util.Scanner;
+import java.io.IOException;
 
 	public class addSubtractEditStudents  {
-	    public static void main(String[] args) {
-	        
+		
+	    public static void main(String[] args)throws IOException {
+	        //Database.fillArrayList();
 	        System.out.println("Would you like to add or remove a student? ");
 	        System.out.println("a) add a student");
 	        System.out.println("b) remove a student");
@@ -22,33 +23,33 @@ import java.util.Scanner;
 	
 	public static void addStudent() 
 	{
+		
 		Scanner userInput= new Scanner(System.in);
 		System.out.println("Sure, lets add a student...");
 		
 		System.out.println("What is their first name?");
 		
-		String fname = userInput.nextLine();
+		String f = userInput.nextLine();
 		System.out.println("What is their last name?");
-		String lname = userInput.nextLine();
+		String l = userInput.nextLine();
 
 		System.out.println("What is their first period?");
-		String fp = userInput.nextLine();
+		String c1N = userInput.nextLine();
 		System.out.println("What is their first period grade?");
-		String fpg = userInput.nextLine();
+		String course1Letter = userInput.nextLine();
 		
 		System.out.println("What is their second period?");
-		String sp = userInput.nextLine();
+		String c2N = userInput.nextLine();
 		System.out.println("What is their second period grade?");
-		String spg = userInput.nextLine();
+		String c2L = userInput.nextLine();
 		
 		System.out.println("What is their third period?");
-		String tp = userInput.nextLine();
+		String c3N = userInput.nextLine();
 		System.out.println("What is their third period grade?");
-		String tpg = userInput.nextLine();
-        //Student.Students.add(new Student(fname, lname, fp,  sp, tp,  fpg, spg, tpg));
-		//add student to database
-	}
-	public static void removeStudent() 
+		String c3L = userInput.nextLine();
+        Database.Student.add(new Student(f, l, 0, ,  sp, tp,  fpg, spg, tpg));
+	}//unfinished business ^^
+	private static void removeStudent() 
 	{
 		System.out.println("Sure, lets remove a student...");
 		System.out.println("Which student would you like to delete?");
@@ -57,4 +58,5 @@ import java.util.Scanner;
 	    int choice = sc.nextInt();
 	    //removes the chosen student from the database, along with all their grades and classes.
 	}
+
 }
