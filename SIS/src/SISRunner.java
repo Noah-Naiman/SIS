@@ -47,10 +47,12 @@ public class SISRunner {
 			else if (sortingChoice == 2)
 			{
 				Collections.sort(Database.database, new GPASort());
+				DisplaySorted.displaySortedList();
 			}
 			else if (sortingChoice == 3)
 			{
 				Collections.sort(Database.database, new ClassSort());
+				DisplaySorted.displaySortedList();
 			}
 			
 		}
