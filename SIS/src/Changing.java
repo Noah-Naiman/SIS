@@ -33,7 +33,8 @@ public class Changing {
 		System.out.println("Which students grades do you want to change?");
 		for(int i = 0; i < Database.database.size(); i++)
 		{
-			System.out.println(i+1 + ") " + Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
+			int listNum = i+1;
+			System.out.println(listNum + ") " + Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
 		}
 		int studentChoice = userIntInput.nextInt()-1;
 		
@@ -80,7 +81,8 @@ public class Changing {
 		System.out.println("Which students classes do you want to switch?");
 		for(int i = 0; i < Database.database.size(); i++)
 		{
-			System.out.println(i + ") " + Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
+			int listNum = i+1;
+			System.out.println(listNum + ") " + Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
 		}
 		int studentChoice = userIntInput.nextInt();
 		
