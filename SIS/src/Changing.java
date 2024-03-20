@@ -48,6 +48,7 @@ public class Changing {
 			System.out.println("What do you want to change the grade to?");
 			String gradeChoice = userStringInput.nextLine();
 			Database.database.get(studentChoice).setCourse1Letter(gradeChoice);
+			//test commenty
 		}
 		
 		else if(classChoice == 2) 
@@ -111,7 +112,7 @@ public class Changing {
 			System.out.println(2 + ")" + Database.database.get(studentChoice).getCourse3Name());
 			int classChoice2 = userIntInput.nextInt();
 			
-			if(classChoice2 == 2)
+			if(classChoice2 == 1)
 			{
 				String tempClass = Database.database.get(studentChoice).getCourse2Name();
 				Database.database.get(studentChoice).getCourse1Name().equals(Database.database.get(studentChoice).getCourse2Name());
