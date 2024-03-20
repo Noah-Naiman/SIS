@@ -167,7 +167,9 @@ public class CalculateGPA {
 			DecimalFormat df = new DecimalFormat("0.00");
 	        String temp = df.format(calcGPA);
 	        double decimalGPA = Double.parseDouble(temp);
-	        Database.database.set(i).setGpa(decimalGPA);
+	        Database.database.get(i).setGpa(decimalGPA);
 		}
 	}
 }
+
+//testing
