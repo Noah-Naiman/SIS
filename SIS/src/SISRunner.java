@@ -18,7 +18,7 @@ public class SISRunner {
 		int firstChoice = userIntInput.nextInt();
 		Database.fillArray();
 
-		Display.displayStudents();
+		//Display.displayStudents();
 
 		
 		if (firstChoice == 1)
