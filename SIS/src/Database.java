@@ -7,8 +7,9 @@ public class Database {
 	static ArrayList <Student> database = new ArrayList <Student> ();
 	public static void fillArray() throws IOException
 	{
+		
 
-		Scanner myFile = new Scanner(new File("StudentList.txt"));
+		Scanner myFile = new Scanner(new File(System.getProperty("user.dir") + "/SIS/src/" + "StudentList.txt"));
 		
 
 		while (myFile.hasNext())
@@ -29,8 +30,9 @@ public class Database {
 			counter ++;
 			int course3P = counter;
 			String course3L = myFile.nextLine();
-			database.add(new Student(firstN, lastN, GPA, course1P, course2P, course3P, course1N, course2N, course3N, course1L, course2L, course3L));
+			database.add(new Student(firstN, lastN, GPA, course1N, course2N, course3N, course1L, course2L, course3L));
 		}
 		
+		System.out.println(database.size());
 	}
 }

@@ -16,6 +16,8 @@ public class SISRunner {
 		System.out.println("3) sort students");
 		int firstChoice = userIntInput.nextInt();
 		Database.fillArray();
+		System.out.println(Database.database.size());
+		
 		if (firstChoice == 1)
 		{
 			addSubtractEditStudents.addOrRemove();
