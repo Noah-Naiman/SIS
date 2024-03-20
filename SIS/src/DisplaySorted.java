@@ -1,4 +1,4 @@
-public class displaySorted 
+public class DisplaySorted 
 {
 	public static void displaySortedList()
 	{

@@ -44,6 +44,7 @@ public class SISRunner {
 			if (sortingChoice == 1)
 			{
 				Collections.sort(Database.database, new NameSort());
+				DisplaySorted.displaySortedList();
 			}
 			else if (sortingChoice == 2)
 			{
