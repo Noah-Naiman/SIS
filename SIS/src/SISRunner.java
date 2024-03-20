@@ -20,7 +20,7 @@ public class SISRunner {
 		
 		if (firstChoice == 1)
 		{
-			
+			addSubtractEditStudents.addOrRemove();
 		}
 		else if (firstChoice == 2)
 		{
