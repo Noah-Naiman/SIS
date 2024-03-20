@@ -17,8 +17,11 @@ public class SISRunner {
 		System.out.println("3) sort students");
 		int firstChoice = userIntInput.nextInt();
 		Database.fillArray();
+
 		CalculateGPA.calculateGPA();
+
 		Display.displayStudents();
+
 
 		
 		if (firstChoice == 1)
