@@ -18,9 +18,13 @@ public class SISRunner {
 		int firstChoice = userIntInput.nextInt();
 		Database.fillArray();
 
+
+		//Display.displayStudents();
+
 		CalculateGPA.calculateGPA();
 
 		Display.displayStudents();
+
 
 
 		

@@ -4,9 +4,9 @@ import java.io.IOException;
 
 	public class addSubtractEditStudents  {
 		
-	    public static void main(String[] args)throws IOException {
-	    	addOrRemove();
-	    }
+	    //public static void main(String[] args)throws IOException {
+	    //	addOrRemove();
+	    //}
 	    
 	    public static void addOrRemove()throws IOException {
 	        //Database.fillArrayList();
@@ -27,8 +27,9 @@ import java.io.IOException;
 	        }
 	    }
 	
-	    public static void addStudent() {
+	    public static void addStudent()throws IOException {
 	        Scanner userInput = new Scanner(System.in);
+	        Database.fillArray();
 	        System.out.println("Sure, let's add a student...");
 
 	        System.out.println("What is their first name?");
@@ -42,27 +43,27 @@ import java.io.IOException;
 
 	        System.out.println("What is their first period grade?");
 
-	        String course2N = userInput.nextLine();
-
-	        System.out.println("What is their second period?");
-	        String course3N = userInput.nextLine();
-
-	        System.out.println("What is their second period grade?");
 	        String course1L = userInput.nextLine();
 
-	        System.out.println("What is their third period?");
-	        String course2L = userInput.nextLine();
-
-	        String course1Le = userInput.nextLine();
-
 	        System.out.println("What is their second period?");
-	        String course2Nu = userInput.nextLine();
+	        String course2N = userInput.nextLine();
 
 	        System.out.println("What is their second period grade?");
-	        String course2Le = userInput.nextLine();
+	        String course2L = userInput.nextLine();
 
 	        System.out.println("What is their third period?");
-	        String course3Nu = userInput.nextLine();
+	        String course3N = userInput.nextLine();
+
+	        //String course1Le = userInput.nextLine();
+
+	        //System.out.println("What is their second period?");
+	        //String course2Nu = userInput.nextLine();
+
+	        //System.out.println("What is their second period grade?");
+	        //String course2Le = userInput.nextLine();
+
+	        //System.out.println("What is their third period?");
+	        //String course3Nu = userInput.nextLine();
 
 
 	        System.out.println("What is their third period grade?");
@@ -70,28 +71,34 @@ import java.io.IOException;
 	        
 
 		
-	    System.out.println(firstN + " " + lastN + " 1. " + course1N + " " + course1L + " 2. " + course2N + " " + course2L + " 3. " + course3N + " " + course3L);
+	    //System.out.println(firstN + " " + lastN + " 1. " + course1N + " " + course1L + " 2. " + course2N + " " + course2L + " 3. " + course3N + " " + course3L);
 
 	        
 	        
-	    System.out.println(firstN + " " + lastN  + " " + course1N + " " + course1L + " " + course2N + " " + course2L + " " + course3N + " " + course3L);
+	    //System.out.println(firstN + " " + lastN  + " " + course1N + " " + course1L + " " + course2N + " " + course2L + " " + course3N + " " + course3L);
 
         Database.database.add(new Student(firstN, lastN, 0, course1N, course2N, course3N, course1L, course2L, course3L));
         Display.displayStudents();
-        
-	}//unfinished business ^^
-	private static void removeStudent() 
+     //the last letter grade has a weird spacing issue  
+	}
+	private static void removeStudent()throws IOException 
 	{
 		System.out.println("Sure, lets remove a student...");
 		System.out.println("Which student would you like to delete?");
+		//Database.fillArray();
+		//Display.displayStudents();
 		for (int i = 0; i < Database.database.size(); i++) 
 		{
 	        System.out.println((i + 1) + ") " +Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
+	        
 	    }//numbers the students(^^^^^^^^^^^^)
 		//syso database with numbers before all students starting with 1, doenst work, says arraylist has length 0.
 		Scanner sc = new Scanner(System.in);
 	    int choice = sc.nextInt();
+	    int choiceBetter = choice - 1;
+	    System.out.println("Sure, removing " + Database.database.get(choiceBetter).getFirstName() + " " + Database.database.get(choiceBetter).getLastName() + "...");
 	    Database.database.remove(choice - 1);
+	    Display.displayStudents();
 	    //removes the chosen student from the database, along with all their grades and classes.
 	}
 	
