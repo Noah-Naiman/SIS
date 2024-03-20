@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.*;
 
 public class Database {
+	static ArrayList <Student> database = new ArrayList <Student> ();
 
 	public static void fillArray() throws IOException
 	{
 
 		Scanner myFile = new Scanner(new File("Student"));
-		ArrayList <Student> database = new ArrayList <Student> ();
 		
 
 		Scanner myFile = new Scanner(new File(System.getProperty("user.dir") + "/SIS/src/" + "StudentList.txt"));
