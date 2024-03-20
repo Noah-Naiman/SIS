@@ -17,8 +17,14 @@ public class SISRunner {
 		System.out.println("3) sort students");
 		int firstChoice = userIntInput.nextInt();
 		Database.fillArray();
+
 		
 		System.out.println(Database.database.size());
+
+
+		Display.displayStudents();
+
+
 		
 		if (firstChoice == 1)
 		{
