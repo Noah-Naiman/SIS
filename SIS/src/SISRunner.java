@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 import java.io.IOException;
 
@@ -16,7 +17,8 @@ public class SISRunner {
 		System.out.println("3) sort students");
 		int firstChoice = userIntInput.nextInt();
 		Database.fillArray();
-		Display.displayStudents();
+
+		displaySorted.displaySortedList();
 		System.out.println(Database.database.size());
 		
 		if (firstChoice == 1)
@@ -36,15 +38,15 @@ public class SISRunner {
 			int sortingChoice = userIntInput.nextInt();
 			if (sortingChoice == 1)
 			{
-				//Sorting.sortLastName();
+				Collections.sort(Database.database, new NameSort());
 			}
 			else if (sortingChoice == 2)
 			{
-				//Sorting.sortGPA();
+				Collections.sort(Database.database, new GPASort());
 			}
 			else if (sortingChoice == 3)
 			{
-				//Sorting.sortClassPeriod();
+				Collections.sort(Database.database, new ClassSort());
 			}
 			
 		}

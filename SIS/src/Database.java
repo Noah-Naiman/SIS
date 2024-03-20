@@ -9,29 +9,26 @@ public class Database {
 	public static void fillArray() throws IOException
 	{
 
-		Scanner myFile = new Scanner(new File("Student"));
+		//Scanner myFile = new Scanner(new File("Student"));
 		
 
-		Scanner myFile = new Scanner(new File(System.getProperty("user.dir") + "/SIS/src/" + "StudentList.txt"));
+		Scanner myFile = new Scanner(new File("StudentList.txt"));
 		
 
 
 		while (myFile.hasNext())
 		{
 			int counter = 0;
-			String firstN = myFile.nextLine();
-			String lastN = myFile.nextLine();
+			String firstN = myFile.next();
+			String lastN = myFile.next();
 			double GPA = 0;
-			String course1N = myFile.nextLine();
-			counter ++;
+			String course1N = myFile.next();
 			int course1P = counter;
-			String course1L = myFile.nextLine();
-			String course2N = myFile.nextLine();
-			counter ++;
+			String course1L = myFile.next();
+			String course2N = myFile.next();
 			int course2P = counter;
-			String course2L = myFile.nextLine();
-			String course3N = myFile.nextLine();
-			counter ++;
+			String course2L = myFile.next();
+			String course3N = myFile.next();
 			int course3P = counter;
 			String course3L = myFile.nextLine();
 			database.add(new Student(firstN, lastN, GPA, course1N, course2N, course3N, course1L, course2L, course3L));
