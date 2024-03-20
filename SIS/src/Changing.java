@@ -48,7 +48,7 @@ public class Changing {
 			System.out.println("What do you want to change the grade to?");
 			String gradeChoice = userStringInput.nextLine();
 			Database.database.get(studentChoice).setCourse1Letter(gradeChoice);
-			//test commenty
+			
 		}
 		
 		else if(classChoice == 2) 
@@ -65,6 +65,13 @@ public class Changing {
 			String gradeChoice = userStringInput.nextLine();
 			Database.database.get(studentChoice).setCourse3Letter(gradeChoice);
 		}
+		
+		
+		System.out.println("The new grades are:");
+		System.out.println(Database.database.get(studentChoice).getCourse1Name() + " " + Database.database.get(studentChoice).getCourse1Letter());
+		System.out.println(Database.database.get(studentChoice).getCourse2Name() + " " + Database.database.get(studentChoice).getCourse2Letter());
+		System.out.println(Database.database.get(studentChoice).getCourse3Name() + " " + Database.database.get(studentChoice).getCourse3Letter());
+		
 	}
 	
 	public static void switchClasses() {
@@ -83,45 +90,42 @@ public class Changing {
 		System.out.println(3 + ")" + Database.database.get(studentChoice).getCourse3Name());
 		int classChoice = userIntInput.nextInt();
 		
-		if(classChoice == 1) 
-		{
-			System.out.println("Which do you want to switch" + Database.database.get(studentChoice).getCourse1Name() + "to?");
-			System.out.println(1 + ")" + Database.database.get(studentChoice).getCourse2Name());
-			System.out.println(2 + ")" + Database.database.get(studentChoice).getCourse3Name());
-			int classChoice2 = userIntInput.nextInt();
-			
-			if(classChoice2 == 1)
-			{
-				String tempClass = Database.database.get(studentChoice).getCourse1Name();
-				Database.database.get(studentChoice).getCourse1Name().equals(Database.database.get(studentChoice).getCourse2Name());
-				Database.database.get(studentChoice).getCourse2Name().equals(tempClass);
-				
-			}
-			
-			else {
-				String tempClass = Database.database.get(studentChoice).getCourse1Name();
-				Database.database.get(studentChoice).getCourse1Name().equals(Database.database.get(studentChoice).getCourse3Name());
-				Database.database.get(studentChoice).getCourse3Name().equals(tempClass);
-			}
+		String tempClass;
+
+		if (classChoice == 1) {
+		    System.out.println("Which do you want to switch " + Database.database.get(studentChoice).getCourse1Name() + " to?");
+		    System.out.println(1 + ")" + Database.database.get(studentChoice).getCourse2Name());
+		    System.out.println(2 + ")" + Database.database.get(studentChoice).getCourse3Name());
+		    int classChoice2 = userIntInput.nextInt();
+
+		    if (classChoice2 == 1) {
+		        tempClass = Database.database.get(studentChoice).getCourse1Name();
+		        Database.database.get(studentChoice).setCourse1Name(Database.database.get(studentChoice).getCourse2Name());
+		        Database.database.get(studentChoice).setCourse2Name(tempClass);
+
+		    } else {
+		        tempClass = Database.database.get(studentChoice).getCourse1Name();
+		        Database.database.get(studentChoice).setCourse1Name(Database.database.get(studentChoice).getCourse3Name());
+		        Database.database.get(studentChoice).setCourse3Name(tempClass);
+		    }
 		}
-		
 		else if(classChoice == 2) 
 		{
-			System.out.println("Which do you want to switch" + Database.database.get(studentChoice).getCourse2Name() + "to?");
+			System.out.println("Which do you want to switch " + Database.database.get(studentChoice).getCourse2Name() + " to?");
 			System.out.println(1 + ")" + Database.database.get(studentChoice).getCourse1Name());
 			System.out.println(2 + ")" + Database.database.get(studentChoice).getCourse3Name());
 			int classChoice2 = userIntInput.nextInt();
 			
 			if(classChoice2 == 1)
 			{
-				String tempClass = Database.database.get(studentChoice).getCourse2Name();
+				tempClass = Database.database.get(studentChoice).getCourse1Name();
 				Database.database.get(studentChoice).getCourse1Name().equals(Database.database.get(studentChoice).getCourse2Name());
 				Database.database.get(studentChoice).getCourse2Name().equals(tempClass);
 				
 			}
 			
 			else {
-				String tempClass = Database.database.get(studentChoice).getCourse2Name();
+				tempClass = Database.database.get(studentChoice).getCourse2Name();
 				Database.database.get(studentChoice).getCourse2Name().equals(Database.database.get(studentChoice).getCourse3Name());
 				Database.database.get(studentChoice).getCourse3Name().equals(tempClass);
 			}
@@ -130,12 +134,32 @@ public class Changing {
 		
 		else if(classChoice == 3) 
 		{
-			System.out.println("Which do you want to switch" + Database.database.get(studentChoice).getCourse3Name() + "to?");
+			System.out.println("Which do you want to switch " + Database.database.get(studentChoice).getCourse3Name() + " to?");
 			System.out.println(1 + ")" + Database.database.get(studentChoice).getCourse1Name());
 			System.out.println(2 + ")" + Database.database.get(studentChoice).getCourse2Name());
 			int classChoice2 = userIntInput.nextInt();
 			
+			if(classChoice2 == 1)
+			{
+				tempClass = Database.database.get(studentChoice).getCourse3Name();
+				Database.database.get(studentChoice).getCourse3Name().equals(Database.database.get(studentChoice).getCourse1Name());
+				Database.database.get(studentChoice).getCourse1Name().equals(tempClass);
+				
+			}
+			
+			else {
+				tempClass = Database.database.get(studentChoice).getCourse3Name();
+				Database.database.get(studentChoice).getCourse3Name().equals(Database.database.get(studentChoice).getCourse2Name());
+				Database.database.get(studentChoice).getCourse2Name().equals(tempClass);
+			}
+			
 		}
+		
+		System.out.println("The new order of classes are:");
+		System.out.println("Class 1: " + Database.database.get(studentChoice).getCourse1Name());
+		System.out.println("Class 2: " + Database.database.get(studentChoice).getCourse2Name());
+		System.out.println("Class 3: " + Database.database.get(studentChoice).getCourse3Name());
+		
 	}
 	
 	
