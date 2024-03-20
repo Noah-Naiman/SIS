@@ -18,8 +18,8 @@ public class SISRunner {
 		int firstChoice = userIntInput.nextInt();
 		Database.fillArray();
 
-		displaySorted.displaySortedList();
-		System.out.println(Database.database.size());
+		Display.displayStudents();
+
 		
 		if (firstChoice == 1)
 		{

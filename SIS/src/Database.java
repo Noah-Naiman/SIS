@@ -34,6 +34,5 @@ public class Database {
 			database.add(new Student(firstN, lastN, GPA, course1N, course2N, course3N, course1L, course2L, course3L));
 		}
 		
-		System.out.println(database.size());
 	}
 }
