@@ -18,7 +18,7 @@ public class SISRunner {
 		Database.fillArray();
 		if (firstChoice == 1)
 		{
-			
+			addSubtractEditStudents.addOrRemove();
 		}
 		else if (firstChoice == 2)
 		{
