@@ -31,9 +31,10 @@ public class Changing {
 		Scanner userStringInput = new Scanner(System.in);
 		Scanner userIntInput = new Scanner(System.in);
 		System.out.println("Which students grades do you want to change?");
+		int listNum = 0;
 		for(int i = 0; i < Database.database.size(); i++)
 		{
-			int listNum = i+1;
+			listNum++;
 			System.out.println(listNum + ") " + Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
 		}
 		int studentChoice = userIntInput.nextInt()-1;
@@ -79,9 +80,10 @@ public class Changing {
 		Scanner userStringInput = new Scanner(System.in);
 		Scanner userIntInput = new Scanner(System.in);
 		System.out.println("Which students classes do you want to switch?");
+		int listNum = 0;
 		for(int i = 0; i < Database.database.size(); i++)
 		{
-			int listNum = i+1;
+			listNum++;
 			System.out.println(listNum + ") " + Database.database.get(i).getFirstName() + " " + Database.database.get(i).getLastName());
 		}
 		int studentChoice = userIntInput.nextInt();
