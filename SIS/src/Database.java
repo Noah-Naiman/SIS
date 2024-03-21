@@ -12,7 +12,7 @@ public class Database {
 		//Scanner myFile = new Scanner(new File("Student"));
 		
 
-		Scanner myFile = new Scanner(new File("StudentList.txt"));
+		Scanner myFile = new Scanner(new File("StudentList2.txt"));
 		
 
 

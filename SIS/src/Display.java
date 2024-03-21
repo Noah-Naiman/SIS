@@ -16,7 +16,7 @@ public class Display {
 			String course1LetterDisplay = Database.database.get(i).getCourse1Letter();
 			String course2LetterDisplay = Database.database.get(i).getCourse2Letter();
 			String course3LetterDisplay = Database.database.get(i).getCourse3Letter();
-			System.out.printf(" %-11s %-13s %-6s %-9s %-4s %-9s %-4s %-9s %-4s",
+			System.out.printf(" %-15s %-16s %-9s %-12s %-4s %-12s %-4s %-12s %-4s",
 					firstNameDisplay, lastNameDisplay, gpaDisplay, course1NameDisplay, course1LetterDisplay,
 					course2NameDisplay, course2LetterDisplay, course3NameDisplay, course3LetterDisplay);
 			System.out.println("");
