@@ -21,7 +21,6 @@ public class SISRunner {
 
 		//Display.displayStudents();
 
-		CalculateGPA.calculateGPA();
 
 		Display.displayStudents();
 

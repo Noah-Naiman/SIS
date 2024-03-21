@@ -14,9 +14,9 @@ public class CalculateGPA {
 			courses [0] = Database.database.get(i).getCourse1Letter();
 			courses[1] = Database.database.get(i).getCourse2Letter();
 			courses[2] = Database.database.get(i).getCourse3Letter();
-			double scale1 = 0.0;
-			double scale2 = 0.0;
-			double scale3 = 0.0;
+			double scale1 = 0.00;
+			double scale2 = 0.00;
+			double scale3= 0.00;
 			
 			
 			if (courses[0].equals("A+"))
@@ -67,6 +67,9 @@ public class CalculateGPA {
 			{
 				scale1 = 0.00;
 			}
+			else {
+				
+			}
 			//split
 			if (courses [1].equals("A+"))
 			{
@@ -116,62 +119,69 @@ public class CalculateGPA {
 			{
 				scale2 = 0.00;
 			}
+			else {
+				
+			}
 			//split 
-			if (courses [2].equals("A+"))
+
+			if (courses [2].equals(" A+"))
 			{
 				scale3 = 4.00;
 			}
-			else if (courses[2].equals("A"))
+			else if (courses[2].equals(" A"))
 			{
 				scale3 = 4.00;
 			}
-			else if (courses[2].equals("A-"))
+			else if (courses[2].equals(" A-"))
 			{
 				scale3 = 3.70;
 			}
-			else if (courses[2].equals("B+"))
+			else if (courses[2].equals(" B+"))
 			{
 				scale3 = 3.30;
 			}
-			else if (courses[2].equals("B"))
+			else if (courses[2].equals(" B"))
 			{
 				scale3 = 3.00;
 			}
-			else if (courses[2].equals("B-"))
+			else if (courses[2].equals(" B-"))
 			{
 				scale3 = 2.70;
 			}
-			else if (courses[2].equals("C+"))
+			else if (courses[2].equals(" C+"))
 			{
 				scale3 = 2.30;
 			}
-			else if (courses[2].equals("C"))
+			else if (courses[2].equals(" C"))
 			{
 				scale3 = 2.00;
-			}
-			else if (courses[2].equals("C-"))
+			} 
+			else if (courses[2].equals(" C-"))
 			{
 				scale3 = 1.70;
 			}
-			else if (courses[2].equals("D+"))
+			else if (courses[2].equals(" D+"))
 			{
 				scale3 = 1.30;
 			}
-			else if (courses[2].equals("D"))
+			else if (courses[2].equals(" D"))
 			{
 				scale3 = 1.00;
 			}
-			else if (courses[2].equals("F"))
+			else if (courses[2].equals(" F"))
 			{
 				scale3 = 0.00;
 			}
+			else {
+				
+			}
 			
 			double sum = scale1 + scale2 + scale3;
+			//DecimalFormat df = new DecimalFormat("#.##");
 			double calcGPA = sum/3;
-			DecimalFormat df = new DecimalFormat("#.##");
-	        String temp = df.format(calcGPA);
-	        double decimalGPA = Double.parseDouble(temp);
-	        Database.database.get(i).setGpa(decimalGPA);
+	        //String temp = df.format(calcGPA);
+	       // double decimalGPA = Double.parseDouble(temp);
+	        Database.database.get(i).setGpa(calcGPA);
 	        
 		}
 	}
