@@ -19,7 +19,7 @@ public class CalculateGPA {
 			double scale3 = 0.0;
 			
 			
-			if (courses [0].equals("A+"))
+			if (courses[0].equals("A+"))
 			{
 				scale1 = 4.00;
 			}
@@ -67,6 +67,7 @@ public class CalculateGPA {
 			{
 				scale1 = 0.00;
 			}
+			//split
 			if (courses [1].equals("A+"))
 			{
 				scale2 = 4.00;
@@ -115,7 +116,7 @@ public class CalculateGPA {
 			{
 				scale2 = 0.00;
 			}
-			
+			//split 
 			if (courses [2].equals("A+"))
 			{
 				scale3 = 4.00;
@@ -164,10 +165,6 @@ public class CalculateGPA {
 			{
 				scale3 = 0.00;
 			}
-			
-			
-			
-			
 			
 			double sum = scale1 + scale2 + scale3;
 			double calcGPA = sum/3;
